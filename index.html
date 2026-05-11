@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Calculator</title>
+    <meta name="description" content="A modern, responsive, feature-rich Calculator Web Application.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <div class="calculator-wrapper">
+        <div class="calculator-container" id="calculator">
+            <div class="theme-switcher">
+                <button id="themeToggle" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+                <div class="actions">
+                    <button id="voiceInputToggle" title="Voice Input" aria-label="Voice Input"><i class="fas fa-microphone"></i></button>
+                    <button id="historyToggle" title="History" aria-label="View History"><i class="fas fa-history"></i></button>
+                </div>
+            </div>
+            
+            <div class="display">
+                <div class="indicators">
+                    <span id="memoryIndicator" class="hidden">M</span>
+                </div>
+                <div class="history-preview" id="historyPreview"></div>
+                <div class="main-display" id="display" aria-live="polite">0</div>
+            </div>
+
+            <div class="keypad">
+                <!-- Memory Functions -->
+                <button class="btn mem-btn" data-action="memory-clear" aria-label="Memory Clear">MC</button>
+                <button class="btn mem-btn" data-action="memory-read" aria-label="Memory Read">MR</button>
+                <button class="btn mem-btn" data-action="memory-subtract" aria-label="Memory Subtract">M-</button>
+                <button class="btn mem-btn" data-action="memory-add" aria-label="Memory Add">M+</button>
+
+                <!-- Scientific Panel -->
+                <div class="scientific-panel hidden" id="scientificPanel">
+                    <button class="btn sci-btn" data-action="sci" data-value="sin(">sin</button>
+                    <button class="btn sci-btn" data-action="sci" data-value="cos(">cos</button>
+                    <button class="btn sci-btn" data-action="sci" data-value="tan(">tan</button>
+                    <button class="btn sci-btn" data-action="sci" data-value="log(">log</button>
+                    
+                    <button class="btn sci-btn" data-action="sci" data-value="ln(">ln</button>
+                    <button class="btn sci-btn" data-action="sci" data-value="sqrt(">√</button>
+                    <button class="btn sci-btn" data-action="sci" data-value="^">^</button>
+                    <button class="btn sci-btn" data-action="sci" data-value="!">n!</button>
+                    
+                    <button class="btn sci-btn" data-action="sci" data-value="π">π</button>
+                    <button class="btn sci-btn" data-action="sci" data-value="e">e</button>
+                    <button class="btn sci-btn" data-action="sci" data-value="(">(</button>
+                    <button class="btn sci-btn" data-action="sci" data-value=")">)</button>
+                </div>
+
+                <!-- Main Numpad -->
+                <button class="btn fn-btn" data-action="toggle-sci" aria-label="Toggle Scientific Mode"><i class="fas fa-flask"></i> Sci</button>
+                <button class="btn op-btn" data-action="clear" aria-label="Clear">C</button>
+                <button class="btn op-btn" data-action="delete" aria-label="Delete"><i class="fas fa-backspace"></i></button>
+                <button class="btn op-btn" data-action="operator" data-value="÷" aria-label="Divide">÷</button>
+
+                <button class="btn num-btn" data-action="number" data-value="7">7</button>
+                <button class="btn num-btn" data-action="number" data-value="8">8</button>
+                <button class="btn num-btn" data-action="number" data-value="9">9</button>
+                <button class="btn op-btn" data-action="operator" data-value="×" aria-label="Multiply">×</button>
+
+                <button class="btn num-btn" data-action="number" data-value="4">4</button>
+                <button class="btn num-btn" data-action="number" data-value="5">5</button>
+                <button class="btn num-btn" data-action="number" data-value="6">6</button>
+                <button class="btn op-btn" data-action="operator" data-value="-" aria-label="Subtract">−</button>
+
+                <button class="btn num-btn" data-action="number" data-value="1">1</button>
+                <button class="btn num-btn" data-action="number" data-value="2">2</button>
+                <button class="btn num-btn" data-action="number" data-value="3">3</button>
+                <button class="btn op-btn" data-action="operator" data-value="+" aria-label="Add">+</button>
+
+                <button class="btn num-btn" data-action="number" data-value="0">0</button>
+                <button class="btn num-btn" data-action="number" data-value=".">.</button>
+                <button class="btn num-btn" data-action="toggle-sign" aria-label="Toggle Sign">±</button>
+                <button class="btn eq-btn" data-action="calculate" aria-label="Calculate">=</button>
+            </div>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel hidden" id="historyPanel">
+            <div class="history-header">
+                <h3>Calculation History</h3>
+                <div class="actions">
+                    <button id="clearHistory" title="Clear History" aria-label="Clear History"><i class="fas fa-trash"></i></button>
+                    <button id="closeHistory" title="Close" aria-label="Close History"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="history-list" id="historyList"></div>
+        </div>
+    </div>
+    <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); font-size: 0.85rem; color: var(--text-muted); letter-spacing: 2px; font-weight: 500; text-transform: uppercase;">
+        MADE BY ANJAN SHETTY
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
