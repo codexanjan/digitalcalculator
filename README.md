@@ -7,6 +7,7 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Web Audio](https://img.shields.io/badge/Web%20Audio-Synthesizer-f59e0b?style=for-the-badge&logo=soundcharts&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-00DF8F?style=for-the-badge&logo=vercel&logoColor=black)](https://digitalcalculator.vercel.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg?style=for-the-badge)](LICENSE)
 
 <br />
@@ -112,5 +113,12 @@ Distributed under the **MIT License**. See `LICENSE` for details.
 
 ---
 
-## 👤 Author
-Crafted with ❤️ by **[Anjan Shetty](https://github.com/codexanjan)**.
+---
+
+<div align="center">
+
+Made with ❤️ by [Anjan Shetty](https://github.com/codexanjan)
+
+[![GitHub](https://img.shields.io/badge/GitHub-codexanjan-181717?style=flat&logo=github)](https://github.com/codexanjan)
+
+</div>
